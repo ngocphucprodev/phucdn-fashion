@@ -1,0 +1,159 @@
+### LOGIN USER
+POST http://localhost:4000/login
+
+### GET ALL USERS
+GET http://localhost:4000/all
+
+### CREATE USER
+POST http://localhost:4000/store
+Content-Type: application/json
+
+{
+    "username": "yennhi7",
+    "email": "yennhi@gmail.com",
+    "password": "123456",
+    "telephone": "0825818595",
+    "gender": "Male",
+    "image":"user1.jpg",
+    "role": false
+}
+
+### UPDATE USER
+PUT http://localhost:4000/edit/638a724d8312571ea3001550
+Content-Type: application/json
+
+{
+    "username": "Minh Quang",
+    "email": "quang@gmail.com",
+    "password": "123456",
+    "telephone": "0825818595",
+    "gender": "Male",
+    "role": "false",
+    "createdAt": "2022-12-02T21:46:53.506Z",
+    "updatedAt": "2022-12-02T21:46:53.506Z",
+    "image":"image3.jpg",
+    "role": false
+}
+
+### DELETE USER
+DELETE http://localhost:4000/delete/641d1d07501e39e71a0532b8
+
+### GET ALL BRAND
+GET http://localhost:3000/brand/show
+
+### CREATE BRAND
+POST http://localhost:3000/brand/store
+Content-Type: application/json
+
+{
+    "name": "Louis Vuitton",
+    "logo": "Louis_Vuitton_logo.png",
+    "description": "Công ty Louis Vuitton (được biết đến nhiều hơn dưới tên gọi đơn giản là Louis Vuitton) là một công ty và nhãn hiệu thời trang xa xỉ của Pháp, có trụ sở tại Paris, Pháp. Đây là một ban của công ty cổ phần Pháp LVMH Louis Vuitton Moët Hennessy S.A. Công ty được đặt tên theo tên người sáng lập ra hãng là Louis Vuitton (4 tháng 8 năm 1821-27 tháng 2 năm 1892), người đã thiết kế và sản xuất hành lý như một Malletier trong nửa sau của thế kỷ 19.",
+    "products": "636e71144d01f690301aaf79"
+}
+### UPDATE BRAND
+PUT http://localhost:3000/brand/edit/636e8113b03e43bf15e4f651
+Content-Type: application/json
+
+{
+    "name": "Louis",
+    "logo": "Louis_Vuitton_logo.png",
+    "description": "Công ty Louis Vuitton (được biết đến nhiều hơn dưới tên gọi đơn giản là Louis Vuitton) là một công ty và nhãn hiệu thời trang xa xỉ của Pháp, có trụ sở tại Paris, Pháp. Đây là một ban của công ty cổ phần Pháp LVMH Louis Vuitton Moët Hennessy S.A. Công ty được đặt tên theo tên người sáng lập ra hãng là Louis Vuitton (4 tháng 8 năm 1821-27 tháng 2 năm 1892), người đã thiết kế và sản xuất hành lý như một Malletier trong nửa sau của thế kỷ 19.",
+    "products": "636e71144d01f690301aaf79"
+}
+
+### DELETE ID BRAND
+DELETE http://localhost:3000/brand/delete/636e769f10afdad1b39d1175
+
+### PRODUCTS
+### GET ALL PRODUCTS
+GET http://localhost:4000/product/show
+
+### GET A PRODUCT
+GET http://localhost:4000/product/detail/6379bc67bbdd1924d1626e5b
+
+### CREATE PRODUCTS
+POST http://localhost:4000/product/store
+Content-Type: application/json
+
+{
+    "name": "Áo Sơ Mi Dài Tay Nam Flannel Kẻ Caro",
+    "price": "499.000",
+    "image": "image14.jpg",
+    "total":10,
+    "type": "Áo Sơmi Nam",
+    "gallery": "64290b5719a0ee08e2c5f0e7"
+}
+
+### UPDATE PRODUCTS
+PUT http://localhost:4000/product/edit/6384fc6fc3a563036ee8277e
+Content-Type: application/json
+
+{
+    "name": "Áo Sơ Mi Nữ Cổ Đức Nano Kháng Khuẩn Khử Mùi",
+    "price": "529.000",
+    "image": "image6.jpg",
+    "total": 10,
+    "gallery": "637f09e3e667a2cbbb280958"
+}
+
+### DELETE ID PRODUCTS
+DELETE http://localhost:4000/product/delete/641dbb1266b4bf16159bad7d
+
+### GALLERY
+### GET ALL GALLERY
+GET http://localhost:4000/gallery/show
+### CREATE GALLERY
+POST http://localhost:4000/gallery/store
+Content-Type: application/json
+
+{
+    "image1": "image15.1.jpg",
+    "image2": "image15.2.jpg",
+    "image3": "image15.3.jpg"
+}
+
+### DETAIL
+GET  http://localhost:4000/gallery/detail/637f04c389f5fb28809cbd23
+
+
+### DELETE ID GALLERY
+DELETE http://localhost:3000/gallery/delete/637f064f89f5fb28809cbd31
+
+### ORDERS
+
+GET  http://localhost:4000/order/show
+###
+POST http://localhost:4000/order/store
+Content-Type: application/json
+
+{
+    "name": "Phạm Thị Yến Nhi",
+    "telephone": "0825818595",
+    "address": "Số 266 thôn 13 Hoà Khánh Buôn Ma Thuột",
+    "totalpayment": "2.300.000"
+}
+
+
+### ORDERS
+
+GET  http://localhost:4000/orderdetail/show
+###
+GET  http://localhost:4000/orderdetail/642d246d5198f260abcd7371
+###
+POST http://localhost:4000/orderdetail/store
+Content-Type: application/json
+
+[{
+    "number": 2,
+    "price": "529.000",
+    "product":"6384fc6fc3a563036ee8277e",
+    "order":"642bdddc670f983c7536e152"
+},
+{
+    "number": 1,
+    "price": "549.000",
+    "product":"63873a72fa63d3c1f6d2b954",
+    "order":"642bdddc670f983c7536e152"
+}]
+
